@@ -169,7 +169,40 @@ nav a.active {
   color: var(--accent);
 }
 
-/* ── PORTFOLIO ── */
+/* ── HERO PHOTO ── */
+.hero-bio-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1.25rem;
+}
+
+.hero-photo-wrap {
+  flex-shrink: 0;
+}
+
+.hero-photo {
+  width: 160px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: grayscale(15%);
+  border: 1px solid var(--rule);
+}
+
+@media (max-width: 640px) {
+  .hero-bio-row {
+    grid-template-columns: 1fr;
+  }
+  .hero-photo {
+    width: 120px;
+    height: 150px;
+  }
+}
+
+
 .project-grid {
   display: flex;
   flex-direction: column;

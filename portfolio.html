@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio &mdash; Cooper Wathen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <a class="site-title" href="index.html">Cooper Wathen</a>
+    <p class="site-tagline">Thinker &middot; Builder &middot; Explorer</p>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="portfolio.html" class="active">Portfolio</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <p class="section-label">Work</p>
+    <h1 class="page-title">Projects</h1>
+    <p class="page-subtitle">A selection of things I've built.</p>
+
+    <div class="project-grid">
+
+      <!-- PROJECT 1 -->
+      <div class="project-item">
+        <div>
+          <p class="project-number">01</p>
+          <h2 class="project-title">Bike Alarm System</h2>
+          <p class="project-desc">
+            A fully functioning motion-sensing alarm system built for bicycle security. The alarm triggers automatically when the bike is moved, and can be silently disarmed using an RFID key fob — no app, no phone required.
+          </p>
+        </div>
+        <span class="project-tag">Hardware</span>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="project-item">
+        <div>
+          <p class="project-number">02</p>
+          <h2 class="project-title">Caseworker Communication Device</h2>
+          <p class="project-desc">
+            A purpose-built communication device designed to support social workers in the field. The device enables reliable messaging and delivers real-time updates about the individuals being assisted. A core feature is an integrated SOS system, allowing users to send emergency alerts directly to their caseworkers when it matters most.
+          </p>
+        </div>
+        <span class="project-tag">Embedded</span>
+      </div>
+
+      <!-- PROJECT 3 -->
+      <div class="project-item">
+        <div>
+          <p class="project-number">03</p>
+          <h2 class="project-title">Automatic Plant Watering System</h2>
+          <p class="project-desc">
+            An automated irrigation system built around a homemade capacitive moisture sensor. When soil dryness crosses a set threshold, the system triggers a relay to water the plant — no manual intervention needed. Fully self-contained and low power.
+          </p>
+        </div>
+        <span class="project-tag">Hardware</span>
+      </div>
+
+      <!-- ── ADD NEW PROJECTS BELOW THIS LINE ──
+           Copy the block above, increment the number, and fill in the details.
+
+      <div class="project-item">
+        <div>
+          <p class="project-number">04</p>
+          <h2 class="project-title">Your Next Project</h2>
+          <p class="project-desc">Description goes here.</p>
+        </div>
+        <span class="project-tag">Tag</span>
+      </div>
+
+      ── END OF PROJECT TEMPLATE ── -->
+
+    </div>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Cooper Wathen &mdash; All rights reserved
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

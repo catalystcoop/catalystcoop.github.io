@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap');
+
+:root {
+  --cream: #f5f0e8;
+  --ink: #1a1714;
+  --warm-gray: #6b6560;
+  --accent: #8b4a2f;
+  --rule: #d4cdc4;
+  --hover-bg: #ede8df;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 300;
+  line-height: 1.75;
+  min-height: 100vh;
+}
+
+/* ── HEADER ── */
+header {
+  border-bottom: 2px solid var(--ink);
+  padding: 2rem 0 0;
+  text-align: center;
+}
+
+.site-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.site-tagline {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  margin-top: 0.25rem;
+  font-weight: 300;
+}
+
+nav {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: center;
+  gap: 0;
+}
+
+nav a {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  transition: background 0.2s, color 0.2s;
+  border-right: 1px solid var(--rule);
+  font-weight: 400;
+}
+
+nav a:first-child {
+  border-left: 1px solid var(--rule);
+}
+
+nav a:hover,
+nav a.active {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+/* ── LAYOUT ── */
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+/* ── SECTION LABELS ── */
+.section-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+}
+
+/* ── HORIZONTAL RULE ── */
+.rule {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 3rem 0;
+}
+
+/* ── HOMEPAGE HERO ── */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.hero-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.hero-bio {
+  font-size: 1rem;
+  color: var(--warm-gray);
+  line-height: 1.85;
+}
+
+.hero-bio p + p {
+  margin-top: 1rem;
+}
+
+.hero-sidebar {
+  border-right: 1px solid var(--rule);
+  padding-right: 4rem;
+  padding-top: 0.5rem;
+}
+
+.hero-sidebar .section-label {
+  margin-bottom: 1.25rem;
+}
+
+.sidebar-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-links a {
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+  display: block;
+  transition: color 0.2s;
+}
+
+.sidebar-links a:hover {
+  color: var(--accent);
+}
+
+/* ── PORTFOLIO ── */
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.project-item {
+  padding: 2.25rem 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  transition: background 0.2s;
+}
+
+.project-item:first-child {
+  border-top: 1px solid var(--rule);
+}
+
+.project-number {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.7rem;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+}
+
+.project-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  color: var(--warm-gray);
+  line-height: 1.75;
+}
+
+.project-tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 0.25rem 0.6rem;
+  display: inline-block;
+  margin-top: 0.25rem;
+  align-self: start;
+  justify-self: end;
+}
+
+/* ── BLOG ── */
+.page-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.page-subtitle {
+  font-size: 0.9rem;
+  color: var(--warm-gray);
+  margin-bottom: 3rem;
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.blog-item {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  align-items: start;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+}
+
+.blog-item:first-child {
+  border-top: 1px solid var(--rule);
+}
+
+.blog-item:hover .blog-title {
+  color: var(--accent);
+}
+
+.blog-date {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  white-space: nowrap;
+  padding-top: 0.2rem;
+  min-width: 90px;
+}
+
+.blog-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.35;
+  margin-bottom: 0.4rem;
+  transition: color 0.2s;
+}
+
+.blog-excerpt {
+  font-size: 0.875rem;
+  color: var(--warm-gray);
+  line-height: 1.7;
+}
+
+.blog-placeholder {
+  text-align: center;
+  padding: 4rem 2rem;
+  border: 1px dashed var(--rule);
+  color: var(--warm-gray);
+  font-size: 0.9rem;
+}
+
+.blog-placeholder strong {
+  display: block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+/* ── FOOTER ── */
+footer {
+  border-top: 2px solid var(--ink);
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .site-title { font-size: 2rem; }
+  nav a { padding: 0.75rem 1rem; font-size: 0.68rem; }
+  .hero { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-sidebar { border-right: none; border-bottom: 1px solid var(--rule); padding-right: 0; padding-bottom: 2rem; }
+  .project-item { grid-template-columns: 1fr; }
+  .project-tag { justify-self: start; }
+  .blog-item { grid-template-columns: 1fr; gap: 0.5rem; }
+}

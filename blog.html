@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog &mdash; Cooper Wathen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <a class="site-title" href="index.html">Cooper Wathen</a>
+    <p class="site-tagline">Thinker &middot; Builder &middot; Explorer</p>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="blog.html" class="active">Blog</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <p class="section-label">Writing</p>
+    <h1 class="page-title">Blog</h1>
+    <p class="page-subtitle">Opinions, observations, and things I'm working through.</p>
+
+    <div class="blog-list">
+
+      <!-- ── HOW TO ADD A BLOG POST ──
+           When you write a post, create a new HTML file (e.g. "my-post-title.html")
+           then add an entry below like this:
+
+      <a class="blog-item" href="my-post-title.html">
+        <span class="blog-date">Jan 01, 2025</span>
+        <div>
+          <h2 class="blog-title">Your Post Title Here</h2>
+          <p class="blog-excerpt">A sentence or two summarizing what the post is about.</p>
+        </div>
+      </a>
+
+           Newest posts go at the TOP of the list.
+      ── END INSTRUCTIONS ── -->
+
+    </div>
+
+    <!-- Shown when no posts exist yet — remove this block once you add your first post -->
+    <div class="blog-placeholder">
+      <strong>Nothing here yet.</strong>
+      First post coming soon.
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Cooper Wathen &mdash; All rights reserved
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
